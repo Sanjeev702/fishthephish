@@ -1,0 +1,74 @@
+<br>
+<br>
+<link rel="stylesheet" href="./regcs.css">
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>Welcome</h2>
+            <label>
+                <span>Email</span>
+                <input type="email" id="txtemail" />
+            </label>
+            <label>
+                <span>Password</span>
+                <input type="password" id="txtpass" />
+            </label>
+            <p class="forgot-pass">Forgot password?</p>
+            <button name="loginbuttton" type="button" class="submit">Sign In</button>
+         
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+                 
+                    <h3>Don't have an account? Please Sign up!<h3>
+                </div>
+                <div class="img__text m--in">
+                
+                    <h3>If you already has an account, just sign in.<h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Sign Up</span>
+                    <span class="m--in">Sign In</span>
+                </div>
+            </div>
+
+            <div method="POST" class="form sign-up"  >
+                <h2>Create your Account</h2>
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="txtname" id="txtname"/>
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email"name="txtemail" id="txtemail"/>
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="txtpass" id="txtpass"/>
+                </label>
+                <label>
+                    <span> Confirm Password</span>
+                    <input type="password" name="txtpass" oninput="check(this)" />
+                </label>
+                <button name="signbutton"  type="submit" class="submit">Sign Up</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.img__btn').addEventListener('click', function() {
+            document.querySelector('.cont').classList.toggle('s--signup');
+        });
+
+    </script>
+
+<script language='javascript' type='text/javascript'> 
+    check = (input) => {
+                if (input.value != document.getElementById('pass').value) {
+                    input.setCustomValidity('Password Must be Matching.');
+                } else {
+                    input.setCustomValidity('');
+                }
+            }
+            </script>
